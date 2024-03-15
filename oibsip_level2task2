@@ -1,1 +1,378 @@
 // TRIBUTE PAGE
+
+<--html code-->
+
+<html lang="en">
+  <head>
+    <title>Vincent Van Gogh</title>
+    <meta name="description" content="Tribute page about Vincent van Gogh" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card-body">
+
+      <header>
+        <h1 id="title">Vincent van Gogh</h1>
+        <p>An Unique Post-Impressionist Painter.!</p>
+      </header>
+
+      <main id="main">
+        
+        <figure id="img-div">
+          <img id="image" src="C:\Users\anees\Desktop\21.jpg" />
+          <figcaption id="img-caption">Van Gogh experienced life and the world intensely and wanted his art to portray the great themes of life, such as hope, love, anxiety and suffering.<br /><br /> “Art is to console those who are broken by life.”</figcaption>
+        </figure>
+
+        <hr />
+
+        <div class="info-chavez" id="tribute-info">
+          <div class="left-bar">
+            <ul>
+              <li><span class="heavy">Born</span> – Vincent Willem van Gogh,30 March 1853 Zundert, Netherlands.</li>
+              <li><span class="heavy">Died</span> – 29 July 1890 (aged 37) Auvers-sur-Oise, France.</li>
+              <li><span class="heavy">Cause of Death</span> – Gunshot wound due to Suicide.</li>
+              <li><span class="heavy">Education</span> – Royal Academy of Fine Arts Académie Royale des Beaux-Arts.</li>
+              <li><span class="heavy">Years active</span> – 1881-1890. </li>
+              <li><span class="heavy">Notable work</span> – <br /><br /> Sunflowers (1887) <br /><br /> Bedroom in Arles (1888)<br /><br />The Starry Night (1889)<br /><br />Wheatfield with Crows (1890)<br /><br /> Sorrowing Old Man (1890).</li>
+          </div>
+
+          <section id="about-chavez" class="biography">
+          <p class="biography-text indent">Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. <br /><br />
+            
+ In just over a decade he created approximately 2100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold, symbolic colours, and dramatic, impulsive and highly expressive brushwork that contributed to the foundations of modern art. Only one of his paintings was known by name to have been sold during his lifetime. Van Gogh became famous after his suicide at age 37, which followed years of poverty and mental illness.</p>
+          <hr class="biography-divider"/>
+ <img src="C:\Users\anees\Desktop\22.webp" class="biography-photo"/>
+          </section>
+          </section>
+
+          <section id="early-life" class="biography">
+            <h2 class="biography-header">Early Life<h2>
+            <p class="biography-text indent">Vincent Willem van Gogh was born on March 30, 1853, in the small village of Groot-Zundert, Netherlands. He was the eldest son of Theodorus van Gogh, a minister of the Dutch Reformed Church, and Anna Cornelia Carbentus. Vincent had four siblings, two brothers, and two sisters.<br /><br />
+
+Growing up in a religious and cultured family, Vincent was exposed to art and literature from a young age. He attended various schools throughout his childhood, demonstrating a keen interest in drawing and sketching from an early age. However, his formal education was sporadic, and he left school at the age of 16.<br /><br />
+
+In his early adulthood, Vincent worked in various roles, including as an art dealer's assistant in The Hague and London. Despite his artistic inclinations, he initially struggled to find his calling and often felt directionless. It wasn't until his late twenties that he decided to pursue a career as an artist.<br /><br />
+
+</p>
+          <hr class="biography-divider"/>
+           <img src="C:\Users\anees\Desktop\100.webp" class="biography-photo"/>
+          </section>
+
+          <section id="before-power" class="biography">
+            <h2 class="biography-header">Career</h2>
+            <p class="biography-text indent">Vincent van Gogh's decision to pursue a career as an artist came relatively late in life. In his early twenties, he worked in various roles, including as a teacher and a preacher's assistant, before eventually finding his calling in art. Despite his late start, van Gogh's passion and dedication to his craft would propel him to great heights in the art world.<br /><br /> 
+          
+Van Gogh's early works were heavily influenced by the Dutch Masters and reflected a dark and somber aesthetic. However, his style underwent a radical transformation after he moved to Paris in 1886. Exposed to the works of Impressionist and Post-Impressionist artists, van Gogh began experimenting with bold colors, expressive brushwork, and innovative compositions.<br /><br />
+
+One of the most significant periods in van Gogh's career occurred during his time in Arles, a town in the south of France, where he experienced a burst of creative energy and produced some of his most iconic works. Inspired by the vibrant colors and landscapes of Provence, van Gogh painted a series of masterpieces, including "The Starry Night" and "Sunflowers."<br /><br />
+
+Throughout his career, van Gogh's mental health remained precarious, and he experienced frequent episodes of depression and anxiety. These struggles often manifested in his art, with themes of loneliness, isolation, and inner turmoil prevalent in many of his works.</p>
+          <hr class="biography-divider"/>
+           <img src="C:\Users\anees\Desktop\104.jpg" class="biography-photo"/>
+          </section>
+
+          <section id="in-power" class="biography">
+            <h2 class="biography-header">Famous Artworks</h2>
+            <p class="biography-text indent">The Starry Night (1889): One of van Gogh's most famous works, "The Starry Night" depicts a swirling night sky over the village of Saint-Rémy-de-Provence. The painting's bold colors, swirling brushstrokes, and dynamic composition have made it an enduring symbol of van Gogh's artistic genius.<br /><br />
+<img src="C:\Users\anees\Desktop\1.webp" class="biography-photo"/>
+<hr class="biography-divider"/>
+          <hr class="interphoto-divider" />
+
+Sunflowers Series (1888-1889): Van Gogh's series of paintings featuring sunflowers are among his most iconic works. These vibrant and expressive still lifes capture the beauty and vitality of the sunflower, while also reflecting van Gogh's fascination with color and form.<br /><br />
+<img src="C:\Users\anees\Desktop\101.jpg" class="biography-photo"/>
+<hr class="biography-divider"/>
+          <hr class="interphoto-divider" />
+
+Self-Portrait with Bandaged Ear (1889): This self-portrait was painted shortly after van Gogh famously severed part of his own ear during a period of mental anguish. Despite his suffering, the painting is striking for its raw emotion and intense gaze, capturing van Gogh's inner turmoil and resilience.<br /><br />
+<img src="C:\Users\anees\Desktop\102.jpg" class="biography-photo"/>
+<hr class="biography-divider"/>
+          <hr class="interphoto-divider" />
+
+The Bedroom (1888): This intimate and autobiographical painting depicts van Gogh's own bedroom in the Yellow House in Arles. The simple yet powerful composition and bold use of color convey a sense of warmth and comfort, reflecting van Gogh's desire for a sanctuary amid his struggles.<br /><br />
+<img src="C:\Users\anees\Desktop\103.webp" class="biography-photo"/>
+<hr class="biography-divider"/>
+          <hr class="interphoto-divider" />
+Irises (1889): This vibrant and exuberant painting features a bouquet of irises set against a background of swirling brushstrokes. The painting's rich colors and intricate details showcase van Gogh's mastery of the floral still life genre and his ability to capture the beauty of nature.
+</p>
+<img src="C:\Users\anees\Desktop\105.jpg" class="biography-photo"/>
+          <hr class="biography-divider"/>
+          <hr class="interphoto-divider" />
+          </section>
+
+          <section id="after-power" class="biography">
+            <h2 class="biography-header">Legacy</h2>
+            <p class="indent biography-text">Vincent van Gogh's legacy is profound and far-reaching, encompassing his influence on art, culture, and society. Here are some aspects of his legacy:<br /><br />
+
+Artistic Innovation: Van Gogh's bold use of color, expressive brushwork, and emotional intensity revolutionized the art world and paved the way for modern art movements such as Expressionism and Fauvism. His distinctive style continues to inspire artists and captivate audiences worldwide.<br /><br />
+
+Cultural Icon: Van Gogh's life and art have become the subject of fascination and admiration, with his paintings among the most celebrated and recognizable in the world. His struggles with mental illness, tragic life story, and untimely death have contributed to his status as a cultural icon and symbol of artistic passion and perseverance.<br /><br />
+
+Mental Health Advocacy: Van Gogh's struggles with mental illness have sparked discussions about the relationship between creativity and mental health. His story has raised awareness about the challenges faced by individuals living with mental illness and has helped reduce stigma surrounding mental health issues.<br /><br />
+
+Art Market Impact: Van Gogh's works command some of the highest prices in the art market, with his paintings regularly fetching millions of dollars at auction. His enduring popularity and influence have made him a cornerstone of the art market and a symbol of artistic value and significance.<br /><br />
+
+Tourism and Cultural Tourism: Van Gogh's life and works have become major tourist attractions, with museums, galleries, and cultural institutions dedicated to preserving and showcasing his art and legacy. Destinations such as the Van Gogh Museum in Amsterdam and the Musée d'Orsay in Paris attract millions of visitors each year, contributing to cultural tourism and economic growth.<br /><br />
+
+Educational and Inspirational: Van Gogh's story and art continue to serve as a source of inspiration and education for people of all ages and backgrounds. His paintings are studied in schools and universities, and his letters provide valuable insights into his artistic process and worldview. His dedication to his craft and unwavering passion for art serve as a reminder of the power of creativity and self-expression.<br /><br />
+
+Overall, Vincent van Gogh's legacy is one of artistic innovation, cultural significance, and enduring influence, making him one of the most iconic and beloved figures in the history of art.
+
+</p>
+          <hr class="biography-divider"/>
+         
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div id="sources" class="footer-container">
+          <h3 class="footer-heading">Sources</h3>
+          <a class="footer-anchor" target="_blank" href="https://www.metmuseum.org/toah/hd/gogh/hd_gogh.htm">MetMuseum</a>
+          <a class="footer-anchor" target="_blank" href="https://www.britannica.com/biography/Vincent-van-Gogh">Britannica</a>
+        </div>
+
+        <div id="more-about" class="footer-container">
+          <h3 class="footer-heading">More About Van Gogh</h3>
+          <a class="footer-anchor" target="_blank" href="https://en.wikipedia.org/wiki/Vincent_van_Gogh">Wikipedia</a>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
+-----------------------------------------------------------------------------------
+/* css code */
+
+html {
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  border-radius: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-width: 300px;
+  background: linear-gradient(90deg, hsl(59, 95%, 41%) 10%, hsl(237, 92%, 15%) 100%);
+  color: rgb(220, 220, 220);
+  font-family: sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+}
+  
+.card-body {
+  background-color: rgba(82, 82, 82, 40%);
+  max-width: 1200px;
+  min-width: 300px;
+  height: 96.5vh;
+  padding: 5px;
+  margin: auto;
+
+
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  }
+
+
+.card-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD BODY CONTENT MARGIN AND PADDING */
+  
+.card-body header,
+.card-body main,
+.card-body footer {
+  padding: inherit;
+  max-width: inherit;
+  min-width: inherit;
+  margin: 5px; 
+}
+  
+header,
+footer {
+  text-align: center;
+  background-color: rgba(10, 10, 10, 40%);
+}
+  
+header > h1,
+header > p {
+  margin: 10px;
+}
+  
+/* # ELEMENTS FROM MAIN */
+  
+main > figure {
+  width: 100%;
+  max-width: inherit;
+  margin: auto;
+  text-align: center;
+}
+  
+main > figure > img {
+  width: inherit;
+  max-width: 100%; 
+  margin: inherit;
+  display: block;
+}
+  
+main > figure > figcaption {
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgba(10, 10, 10, 40%);
+  display: inline-block;
+}
+  
+
+  
+.info-chavez {
+  padding: 0;
+  width: 100%;
+  
+  min-width: inherit;
+  margin: 10px 0;
+  max-width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+  
+.left-bar, 
+.biography {
+
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+  
+
+.left-bar::-webkit-scrollbar,
+.biography::-webkit-scrollbar {
+  display: none;
+}
+  
+.left-bar {
+  width: 48%;
+  height: 650px; 
+  margin: 0;
+  background-color: rgba(10, 10, 10, 40%);
+}
+  
+.biography {
+  width: 48%; 
+  height: 650px; 
+}
+  
+.biography-header {
+  background-color: rgb(26,28,63);
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+  
+.biography-text {
+  padding: 0 10px;
+}
+  
+.biography-text::before {
+    content: "\A";
+  }
+  
+.biography-photo {
+  object-fit: cover;
+  width: 100%;
+}
+  
+.biography-divider {
+  margin: 10px 0 20px 0;
+}
+
+.interphoto-divider {
+  margin: 10px 0;
+  height: unset;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-anchor,
+.footer-heading {
+  margin-bottom: 5px;
+}
+
+.footer-heading {
+  margin: 0;
+  padding: 10px;
+}
+
+/* COSMETICS AND POSITIONING */
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: yellow;
+}
+  
+figcaption,
+span,
+p,
+li,
+h2,
+h3,
+a {
+  font-size: min(3vw, 19px);
+}
+  
+hr {
+  margin: unset;
+  border: none;
+  height: 5px;
+  background-color: rgb(56, 56, 56);
+  flex-grow: 1;
+}
+  
+li {
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+  
+.indent {
+  margin-left: 1em;
+}
+  
+.heavy {
+  font-weight: 900
+}
+  
+.no-top-margin {
+  margin-top: 0;
+}
+ 
