@@ -1,1 +1,176 @@
 // LOGIN AUTHENTICATION
+
+<-- login.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login System</title>
+  <link rel="stylesheet" href="log.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+      <span id="login-message"></span>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register Now</a></p>
+  </div>
+  
+  <script src="in.js"></script>
+</body>
+</html>
+-------------------------------------------------------------------------
+<--register.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register System</title>
+  <link rel="stylesheet" href="log.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register</h1>
+    <form id="register-form">
+      <label for="reg-username">Username:</label>
+      <input type="text" id="reg-username" name="reg-username" required>
+      <label for="reg-password">Password:</label>
+      <input type="password" id="reg-password" name="reg-password" required>
+      <button type="submit">Register</button>
+      <span id="register-message"></span>
+    </form>
+  </div>
+  
+  <script src="in.js"></script>
+</body>
+</html>
+--------------------------------------------------------------------------
+<--secured.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secured Page</title>
+
+</head>
+<body>
+  <h2>Secured Content</h2>
+  <p>Welcome! You are logged in.</p>
+  <button onclick="logout()">Logout</button>
+</body>
+</html>
+--------------------------------------------------------------------------
+/* log.css */
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #eee;
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+
+form input, form button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+span#login-message, span#register-message {
+  color: red;
+  font-weight: bold;
+}
+----------------------------------------------------------------------------
+// in.js
+
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+const loginMessage = document.getElementById('login-message');
+const registerMessage = document.getElementById('register-message');
+
+let users = []; // In a real scenario, you'd use a secure database for user storage.
+
+registerForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const regUsername = document.getElementById('reg-username').value;
+  const regPassword = document.getElementById('reg-password').value;
+
+  // Add the new user to the list
+  users.push({ username: regUsername, password: regPassword });
+  
+  // Redirect to login page after successful registration
+  window.location.href = 'login.html';
+});
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Implement login logic (check username/password against stored users)
+  const isLoggedIn = authenticate(username, password);
+
+  if (isLoggedIn) {
+    // Login successful, store a token (improve security with server-side sessions)
+    localStorage.setItem('loginToken', 'some_secure_token');
+    window.location.href = 'secured.html';
+  } else {
+    loginMessage.textContent = 'Invalid username or password';
+  }
+});
+
+function authenticate(username, password) {
+  // Implement logic to check username/password against stored users
+  for (const user of users) {
+    if (user.username === username && user.password === password) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+// Check for existing token on secured page load
+window.onload = function() {
+  const loginToken = localStorage.getItem('loginToken');
+  if (!loginToken) {
+    window.location.href = 'login.html'; // Redirect to login if no token
+  }
+}
+
+
