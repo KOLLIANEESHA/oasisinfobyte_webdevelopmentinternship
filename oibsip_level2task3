@@ -1,1 +1,241 @@
 // TO-DO PAGE
+
+<-- html and js code-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do App</title>
+<link rel="stylesheet" href="cascade.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1 class="app-title">To-Do App</h1>
+    <input type="text" id="taskInput" placeholder="Add new task...">
+    <button class="action-button" onclick="addTask()">Add Task</button>
+
+    <h2>Pending Tasks</h2>
+    <ul id="pendingTasks"></ul>
+
+    <h2>Completed Tasks</h2>
+    <ul id="completedTasks"></ul>
+</div>
+
+<script>
+function addTask() {
+    var inputValue = document.getElementById("taskInput").value;
+    if (inputValue === '') {
+        alert("Please enter a task!");
+        return;
+    }
+
+    var listItem = document.createElement("li");
+    var textNode = document.createTextNode(inputValue);
+    listItem.appendChild(textNode);
+
+    var date = new Date();
+    var dateTime = document.createElement("span");
+    dateTime.innerHTML = ' - Added: ' + formatDate(date);
+    listItem.appendChild(dateTime);
+
+    var checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.onclick = toggleTask;
+    listItem.appendChild(checkBox);
+
+    var deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.className = "delete-button";
+    deleteButton.onclick = deleteTask;
+    listItem.appendChild(deleteButton);
+
+    var editButton = document.createElement("button");
+    editButton.innerHTML = "Edit";
+    editButton.className = "edit-button";
+    editButton.onclick = editTask;
+    listItem.appendChild(editButton);
+
+    document.getElementById("pendingTasks").appendChild(listItem);
+
+    document.getElementById("taskInput").value = '';
+}
+
+function toggleTask() {
+    var listItem = this.parentNode;
+    if (this.checked) {
+        listItem.classList.add("completed");
+        var date = new Date();
+        var dateTime = document.createElement("span");
+        dateTime.innerHTML = ' - Completed: ' + formatDate(date);
+        listItem.appendChild(dateTime);
+        document.getElementById("completedTasks").appendChild(listItem);
+    } else {
+        listItem.classList.remove("completed");
+        var dateSpan = listItem.querySelector('span');
+        if (dateSpan) {
+            listItem.removeChild(dateSpan);
+        }
+        document.getElementById("pendingTasks").appendChild(listItem);
+    }
+}
+
+function deleteTask() {
+    var listItem = this.parentNode;
+    listItem.parentNode.removeChild(listItem);
+}
+
+function editTask() {
+    var listItem = this.parentNode;
+    var taskText = listItem.firstChild.textContent;
+    var newText = prompt("Edit Task:", taskText.trim());
+    if (newText !== null && newText !== '') {
+        listItem.firstChild.textContent = newText;
+    }
+}
+
+function formatDate(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear() + "  " + strTime;
+}
+
+</script>
+
+</body>
+</html>
+
+-------------------------------------------------------------
+
+/* css code */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #78e08f, #0f3443);
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    text-align: center;
+    color: #4CAF50; /* Green title color */
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.action-button {
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Green button background */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+}
+
+.action-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.lists-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.list {
+    flex: 1;
+    background-color: #f9f9f9; /* Light gray list background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.list h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #fff; /* White list item background */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    transform: translateY(-3px);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.edit-delete-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button,
+.edit-button {
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Red delete button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.delete-button:hover,
+.edit-button:hover {
+    background-color: #45a049; /* Darker red on hover */
+}
+
